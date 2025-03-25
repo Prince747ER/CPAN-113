@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tug of War</title>
+    <style>
+        body {
+            text-align: center;
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+        }
+        h1 {
+            color: #333;
+        }
+        #game-container {
+            position: relative;
+            width: 80%;
+            margin: 20px auto;
+            background: #fff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+        #rope {
+            width: 200px;
+            height: 20px;
+            background: brown;
+            position: relative;
+            left: 50%;
+            transform: translateX(-50%);
+            transition: 0.2s ease-in-out;
+        }
+        #result {
+            font-size: 24px;
+            font-weight: bold;
+            margin-top: 10px;
+            color: green;
+        }
+        #instructions {
+            font-size: 18px;
+            margin-top: 15px;
+        }
+        button {
+            padding: 10px 20px;
+            font-size: 18px;
+            cursor: pointer;
+            background: #28a745;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            margin-top: 20px;
+        }
+        button:hover {
+            background: #218838;
+        }
+    </style>
+</head>
+<body>
+    <h1>Tug of War Game</h1>
+    <div id="game-container">
+        <p id="instructions">Player 1 (A) vs. Player 2 (L) - Press keys to pull!</p>
+        <div id="rope"></div>
+        <p id="result"></p>
+        <button onclick="resetGame()">Restart</button>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
